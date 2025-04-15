@@ -56,3 +56,6 @@ if len(tweet) > 280:
 
 # Post to Twitter
 api.update_status(tweet)
+
+response = api.update_status(tweet)
+print("Tweet sent successfully:", response.id)
