@@ -4,7 +4,10 @@ import requests
 import random
 #Twitter auth
 
-API_KEY = os.environ["TWITTER_API_KEY"] API_SECRET = os.environ["TWITTER_API_SECRET"] ACCESS_TOKEN = os.environ["TWITTER_ACCESS_TOKEN"] ACCESS_SECRET = os.environ["TWITTER_ACCESS_SECRET"]
+API_KEY = os.environ["TWITTER_API_KEY"]
+API_SECRET = os.environ["TWITTER_API_SECRET"]
+ACCESS_TOKEN = os.environ["TWITTER_ACCESS_TOKEN"]
+ACCESS_SECRET = os.environ["TWITTER_ACCESS_SECRET"]
 
 auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET) api = tweepy.API(auth)
 
@@ -28,3 +31,5 @@ if len(tweet) > 280: tweet = tweet[:277] + "..."
 
 api.update_status(tweet)
 
+
+ 
