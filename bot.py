@@ -9,8 +9,8 @@ API_SECRET = os.environ["TWITTER_API_SECRET"]
 ACCESS_TOKEN = os.environ["TWITTER_ACCESS_TOKEN"]
 ACCESS_SECRET = os.environ["TWITTER_ACCESS_SECRET"]
 
-auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET) api = tweepy.API(auth)
-
+auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
+api = tweepy.API(auth)
 def get_fact(): r = requests.get("https://uselessfacts.jsph.pl/random.json?language=en") return r.json()["text"]
 
 def get_quote(): r = requests.get("https://api.quotable.io/random") data = r.json() return f'"{data["content"]}" — {data["author"]}'
