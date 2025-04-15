@@ -2,7 +2,7 @@ import os
 import tweepy
 import requests
 import random
-Twitter auth
+#Twitter auth
 
 API_KEY = os.environ["TWITTER_API_KEY"] API_SECRET = os.environ["TWITTER_API_SECRET"] ACCESS_TOKEN = os.environ["TWITTER_ACCESS_TOKEN"] ACCESS_SECRET = os.environ["TWITTER_ACCESS_SECRET"]
 
